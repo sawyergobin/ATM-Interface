@@ -157,6 +157,7 @@ Y8dNA@@AK@@d@@@b@@@@@@@@@L,-,\!]]\X(5)Z/7c\\t5/K@@@@@@@@b@@@@@@[
                                     switch (menuChoice) //using an if tree instead could allow for numpad entries?
                                     {
                                         case ConsoleKey.D1:
+                                        case ConsoleKey.NumPad1:
                                             Console.Clear();
                                             Console.WriteLine($"Your current account# {userAcctNum} balance is: \n{acctBalance:c} " +
                                                 $"\nPress any key to return to the menu.");
@@ -164,6 +165,7 @@ Y8dNA@@AK@@d@@@b@@@@@@@@@L,-,\!]]\X(5)Z/7c\\t5/K@@@@@@@@b@@@@@@[
                                             break;
 
                                         case ConsoleKey.D2:
+                                        case ConsoleKey.NumPad2:
                                             Console.Clear();
                                             Console.Write("Enter the amount you wish to deposit: ");
                                             decimal depositAmt = decimal.Parse(Console.ReadLine().Trim());
@@ -174,15 +176,17 @@ Y8dNA@@AK@@d@@@b@@@@@@@@@L,-,\!]]\X(5)Z/7c\\t5/K@@@@@@@@b@@@@@@[
                                             break;
 
                                         case ConsoleKey.D3:
+                                        case ConsoleKey.NumPad3:
                                             Console.Clear();
                                             Console.Write("Enter the amount you wish to withdraw: ");
                                             decimal withdrawAmt = decimal.Parse(Console.ReadLine().Trim());
                                             acctBalance -= withdrawAmt;
-                                            Console.WriteLine($"Withdrawing {withdrawAmt:c}. \nUpdated account# {userAcctNum}: " +                 $"remaining balance is {acctBalance:c}. \nPress any key to return to the menu");
+                                            Console.WriteLine($"Withdrawing {withdrawAmt:c}. \nUpdated account# {userAcctNum}: " + $"remaining balance is {acctBalance:c}. \nPress any key to return to the menu");
                                             Console.ReadKey();
                                             break;
 
                                         case ConsoleKey.D4:
+                                        case ConsoleKey.NumPad4:
                                             Console.Clear();
                                             Console.WriteLine($"Changing the menu image for account# {userAcctNum}. " +
                                                 $"\nnPlease Select from the following options: " +
@@ -194,16 +198,19 @@ Y8dNA@@AK@@d@@@b@@@@@@@@@L,-,\!]]\X(5)Z/7c\\t5/K@@@@@@@@b@@@@@@[
                                             switch (picMenuChoice)
                                             {
                                                 case ConsoleKey.D1:
+                                                case ConsoleKey.NumPad1:
                                                     menuArt = balloons;
                                                     Console.WriteLine("Menu image changed to some joyful balloons. Enjoy!");
                                                     break;
 
                                                 case ConsoleKey.D2:
+                                                case ConsoleKey.NumPad2:
                                                     menuArt = monaLisa;
                                                     Console.WriteLine("Menu image changed to the beautiful Mona Lisa. Enjoy!");
                                                     break;
 
                                                 case ConsoleKey.D3:
+                                                case ConsoleKey.NumPad3:
                                                     menuArt = libertyBell;
                                                     Console.WriteLine("Menu image changed to the historic Liberty Bell. Enjoy!");
                                                     break;
